@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import React from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+
 import './App.css';
+
+import Home from "./containers/Home";
+import TimeLine from "./containers/TimeLine";
+import Swot from "./containers/Swot";
+import Layout from "./components/Layout";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+        <ScrollToTop>
+              <Layout hideArrowPaths={['/contato']}>
+                  <Switch>
+                      <Route path="/" exact component={Home} />
+                      <Route path="/timeline" exact component={TimeLine} />
+                      <Route path="/swot" exact component={Swot} />
+                  </Switch>
+              </Layout>
+        </ScrollToTop>
+    </BrowserRouter>
   );
 }
 
