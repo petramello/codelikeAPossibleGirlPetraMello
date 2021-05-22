@@ -1,4 +1,4 @@
-# CodeLikeAPossibleGirl: My timeline and SWOT\
+# CodeLikeAPossibleGirl: My timeline and SWOT
 <br>
 <br>
 
